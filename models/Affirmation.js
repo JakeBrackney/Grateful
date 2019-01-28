@@ -1,7 +1,7 @@
 const mongoose = require("../db/connection");
 const Schema = mongoose.Schema;
 
-const Gratitude = new Schema ({
+const Affirmation = new Schema ({
 	text: String,
 	createdAt: {
 		type: Date,
@@ -13,4 +13,4 @@ const Gratitude = new Schema ({
 	}
 })
 
-module.exports = mongoose.model('Gratitude', Gratitude)
+module.exports = mongoose.model('Affirmation', Affirmation)
