@@ -5,23 +5,23 @@ const passport = require("passport");
 
 module.exports = {
     show: (req, res) => {
-      User.findOne({ _id: req.params.id })
-        .populate({
-          path: "lists",
-          options: { limit: 5, sort: { createdAt: -1 } }
-        })
-        .then(user => {
-          res.render("user/show", { user });
-        });
+      // User.findOne({ _id: req.params.id })
+      //   .populate({
+      //     path: "lists",
+      //     options: { limit: 3, sort: { createdAt: -1 } }
+      //   })
+      //   .then(user => {
+          res.render("user/show", { ists });
+        // });
     },
-    
+
     login: (req, res) => {
       res.render("user/login", { message: req.flash("loginMessage") });
     },
 
     createLogin: (req, res) => {
       const login = passport.authenticate("local-login", {
-        successRedirect: "/",
+        successRedirect: "/user/show",
         failureRedirect: "user/login",
         failureFlash: true
       });

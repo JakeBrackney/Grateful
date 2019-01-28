@@ -21,7 +21,7 @@ module.exports = function(passport) {
         passReqToCallback: true
       },
       function(req, email, password, callback) {
-        User.findOne({ "email": email })
+        User.findOne({ "email" : email })
           .then(user => {
             if (user) {
               return callback(

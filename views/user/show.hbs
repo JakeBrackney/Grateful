@@ -3,11 +3,24 @@
 <div class='controls'>
 
   <form action="/lists/gratitude">
-    <input type="submit" value="New Gratitude" />
+    <input type="submit" value="My Gratitude List" />
   </form>
 
   <form action="/lists/affirmation">
-    <input type="submit" value="New Affirmation" />
+    <input type="submit" value="My Affirmations" />
   </form>
 
 </div>
+
+{{!-- <section class="profile">
+  <h2>{{user.local.email}}</h2>
+  {{#if user.lists}}
+    <div class="tweets">
+      {{#each user.lists}}
+         {{> 'tweet'}}
+      {{/each}}
+    </div>
+  {{else}}
+    <p>No Tweets yet</p>
+  {{/if}}
+</section> --}}

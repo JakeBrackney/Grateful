@@ -9,4 +9,8 @@ router.use((req, res, next) => {
 router.use('/', require("./application.js"))
 router.use('/user', require('./user'))
 
+// router.all('*', (req, res) => {
+//   res.status(400).send();
+// });
+
 module.exports = router

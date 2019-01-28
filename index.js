@@ -24,6 +24,7 @@ require("./config/passport")(passport);
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(express.static('public'))
 app.set('view engine', 'hbs')
 app.use(methodOverride("_method"));
 
