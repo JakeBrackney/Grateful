@@ -5,14 +5,7 @@ const passport = require("passport");
 
 module.exports = {
     show: (req, res) => {
-      // User.findOne({ _id: req.params.id })
-      //   .populate({
-      //     path: "lists",
-      //     options: { limit: 3, sort: { createdAt: -1 } }
-      //   })
-      //   .then(user => {
-          res.render("user/show", { ists });
-        // });
+          res.render("user/show", { Lists });
     },
 
     login: (req, res) => {
@@ -22,7 +15,7 @@ module.exports = {
     createLogin: (req, res) => {
       const login = passport.authenticate("local-login", {
         successRedirect: "/user/show",
-        failureRedirect: "user/login",
+        failureRedirect: "/user/login",
         failureFlash: true
       });
   
@@ -35,8 +28,8 @@ module.exports = {
 
     createSignUp: (req, res, next) => {
       const signupStrategy = passport.authenticate("local-signup", {
-        successRedirect: "/",
-        failureRedirect: "user/signup",
+        successRedirect: "/user/show",
+        failureRedirect: "/user/signup",
         failureFlash: true
       });
   

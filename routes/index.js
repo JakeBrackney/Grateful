@@ -6,8 +6,9 @@ router.use((req, res, next) => {
   next();
 });
 
-router.use('/', require("./application.js"))
+router.use('/', require("./app.js"))
 router.use('/user', require('./user'))
+// router.use('/lists', require('./affirmation'))
 
 // router.all('*', (req, res) => {
 //   res.status(400).send();
