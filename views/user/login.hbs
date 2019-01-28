@@ -1,25 +1,30 @@
-   {{#if message}}
+<section class="row">
+  <h2>Log In:</h2>
+
+  {{#if message}}
     <p class="alert">{{message}}</p>
   {{/if}}
 
-<section class="row">
-  <h4>Log In:</h4>
-
   <form action="" method="POST" class="auth-form">
     <p class="input-field">
-      <input type="username" name="email" placeholder="email">
+      <input type="username" name="email" placeholder="email" >
     </p>
     <p class="input-field">
-      <input type="password" name="password" placeholder="password">
+      <input type="password" name="password" placeholder="password" class="input-field">
     </p>
     <p class="input-field">
       <a href='user/signup'></a>
-      <input type="submit" value="Log In" class="btn waves-effect waves-light">
+      <input type="submit" value="Log In" class="button">
     </p>
-    <p>
-      <a href='/views/user/signup.hbs'></a>
-      <input type="submit" value="Sign Up">
+    <p class="input-field">
+    {{!-- <form action="/user/signup" method="GET">
+      <input type="submit" value="Sign Up" class="button"/> 
+    </form> --}}
+      <a href='/user/signup'></a>
+      <input type="submit" value="Sign Up" class="button">
     </p>
+
+
     
 
   </form>

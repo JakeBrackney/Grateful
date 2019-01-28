@@ -1,4 +1,20 @@
-<h1>Gratitude List</h1>
+<h1>My Gratitude List</h1>
+
+<div class='controls'>
+
+  <form action="index" method="GET">
+    <input type="submit" value="Show All" class="button"/>
+  </form>
+
+  <form action="/new/affirmation" method="GET">
+    <input type="submit" value="New Gratitude" class="button"/>
+  </form>
+
+  <form action="/user/show" method="GET">
+    <input type="submit" value="Back" class="button"/>
+  </form>
+
+</div>
 
 {{!-- populate 3 random gratitudes --}}
-{{!-- add create new button and create new view --}}
+{{!-- route "new" button and create "new" view --}}

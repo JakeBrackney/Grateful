@@ -3,16 +3,20 @@
 <div class='controls'>
 
   <form action="/lists/affirmation">
-    <input type="submit" value="My Affirmations" />
+    <input type="submit" value="My Affirmations" class="button"/>
   </form>
 
   <form action="/lists/gratitude">
-    <input type="submit" value="My Gratitude List" />
+    <input type="submit" value="My Gratitude List" class="button"/>
   </form>
 
+</div>
+
 {{!-- log out function does not work --}}
-  <form action="/">
-    <input type="submit" value="Logout" /> 
+<div id="logout">
+
+  <form action="/" method="GET" class="logout">
+    <input type="submit" value="Logout" class="button"/> 
   </form>
 
 </div>

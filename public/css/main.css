@@ -1,8 +1,43 @@
 body {
-  background: rgb(47, 69, 193);
-
+  background: rgb(202, 229, 255);
+  font-family: 'Baloo Thambi', cursive;
+  color: rgb(137, 187, 254);
+  margin: 0 auto;
+  text-align: center;
 }
 
 h1 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 96px;
+  font-weight: 100;
 }
+
+h2 {
+  font-size: 72px;
+  font-weight: 100;
+}
+
+.input-field:focus {
+  color: rgb(202, 229, 255);
+  box-sizing: border-box;
+  outline: none
+}
+
+.controls {
+  display: inline-flex;
+  /* border: 1px solid black; */
+}
+
+.button {
+  font-size: 36px;
+  font-family: 'Baloo Thambi', cursive;
+  color: rgb(137, 187, 254);
+  border-radius: 50px;
+  border-style: groove;
+  margin: 15px 15px 0 0
+}
+
+
+
+
+
+

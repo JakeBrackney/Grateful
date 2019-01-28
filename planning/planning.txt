@@ -1,0 +1,25 @@
+Color Scheme:
+background: rgb(202, 229, 255)
+heading text: rgb(137, 187, 254)
+
+others: rgb(172, 237, 255), rgb(111, 138, 183), rgb(97, 93, 108)
+
+List style: bulleted list
+
+
+
+
+To Build: 
+- New list item form, C
+- Show list (3 items upon login, option for show all), R 
+- Update list item, populate currentItem in newItem form, U 
+- Delete list item, D 
+
+- LogOut functionality
+
+
+
+
+
+
+
