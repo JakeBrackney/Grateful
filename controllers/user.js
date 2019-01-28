@@ -5,7 +5,7 @@ const passport = require("passport");
 
 module.exports = {
     show: (req, res) => {
-          res.render("user/show", { Lists });
+          res.render("user/show");
     },
 
     login: (req, res) => {

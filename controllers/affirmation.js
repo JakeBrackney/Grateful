@@ -2,7 +2,8 @@
 
 module.exports = {
   index: (req, res) => {
-    res.render('/views/lists/affirmation')
+    // console.log("Affirmations Clicked")
+    res.render('lists/affirmation')
   }
 }
 

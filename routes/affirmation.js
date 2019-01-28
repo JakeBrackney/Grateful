@@ -2,6 +2,6 @@ const express = require('express')
 const router = express.Router()
 const affirmationController = require('../controllers/affirmation')
 
-router.get('/', affirmationController.index)
+router.get('/affirmation', affirmationController.index)
 
 module.exports = router
