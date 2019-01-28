@@ -1,15 +1,19 @@
 <section class="row">
   <h4>Log In:</h4>
 
+   {{#if message}}
+    <p class="alert">{{message}}</p>
+  {{/if}}
+
   <form action="" method="POST" class="auth-form">
     <p class="input-field">
-      <input type="username" name="username" placeholder="username">
+      <input type="username" name="username" placeholder="email">
     </p>
     <p class="input-field">
-      <input type="password" name="password" placeholder="Password">
+      <input type="password" name="password" placeholder="password">
     </p>
     <p class="input-field">
-      <a href='user/sign-up'></a>
+      <a href='user/signup'></a>
       <input type="submit" value="Log In" class="btn waves-effect waves-light">
     </p>
   </form>
