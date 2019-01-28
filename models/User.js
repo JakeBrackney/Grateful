@@ -24,7 +24,7 @@ User.methods.encrypt = function(password) {
 };
 
 User.methods.validPassword = function(password) {
-  return bcrypt.compareSync(password, this.local.password);
+  return bcrypt.compareSync(password, this.password);
 };
 
 module.exports = mongoose.model('User', User)

@@ -9,9 +9,6 @@ const methodOverride = require("method-override");
 
 const app = express()
 
-app.set('view engine', 'hbs')
-app.use(methodOverride("_method"));
-
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
@@ -23,10 +20,12 @@ app.use(
   );
   app.use(flash());
 
-
 require("./config/passport")(passport);
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.set('view engine', 'hbs')
+app.use(methodOverride("_method"));
 
 app.use(require("./routes/index.js"));
 
