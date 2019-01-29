@@ -2,14 +2,16 @@ const express = require('express')
 const router = express.Router()
 
 router.use((req, res, next) => {
-  res.locals.currentUser = req.user;
+  res.currentUser = req.user;
   next();
 });
 
 router.use('/', require("./app.js"))
 router.use('/user', require('./user'))
 router.use('/lists', require('./affirmation'))
-router.use('/lists', require('./gratitude'))
+// router.use('/new', require('./affirmation'))
+router.use('/gratitude', require('./gratitude'))
+// router.use('/new', require('./gratitude'))
 
 
 // router.all('*', (req, res) => {
