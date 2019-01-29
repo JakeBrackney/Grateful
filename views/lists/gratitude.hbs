@@ -1,5 +1,19 @@
 <h1>My Gratitude List</h1>
 
+{{!-- populate 3 random gratitudes --}}
+<section class="profile">
+  <h2>{{user.local.email}}</h2>
+  {{#if user.lists}}
+    <div class="items">
+      {{#each user.lists}}
+         {{'./affirmation.hbs'}}
+      {{/each}}
+    </div>
+  {{else}}
+    <p>No gratitudes yet!</p>
+  {{/if}}
+</section>
+
 <div class='controls'>
 
   <form action="index" method="GET">
@@ -16,5 +30,6 @@
 
 </div>
 
-{{!-- populate 3 random gratitudes --}}
+
 {{!-- route "new" button and create "new" view --}}
+

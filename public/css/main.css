@@ -16,6 +16,22 @@ h2 {
   font-weight: 100;
 }
 
+textarea {
+  padding: 15px;
+  /* margin: 5px; */
+  font-family: 'Baloo Thambi', cursive;
+  color: rgb(117, 117, 117);
+  font-size: 20px;
+  border-radius: 15px;
+  border: none
+}
+
+textarea::placeholder {
+  padding: 5px;
+  font-family: 'Baloo Thambi', cursive;
+  font-size: 20px;
+}
+
 .input-field:focus {
   color: rgb(202, 229, 255);
   box-sizing: border-box;
@@ -32,8 +48,8 @@ h2 {
   font-family: 'Baloo Thambi', cursive;
   color: rgb(137, 187, 254);
   border-radius: 50px;
-  border-style: groove;
-  margin: 15px 15px 0 0
+  margin: 15px 15px 0 0;
+  padding: 0 15px 0 15px;
 }
 
 

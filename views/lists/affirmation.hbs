@@ -1,5 +1,19 @@
 <h1>My Affirmations</h1>
 
+{{!-- populate 3 random affirmations --}}
+<section class="profile">
+  <h2>{{user.local.email}}</h2>
+  {{#if user.lists}}
+    <div class="items">
+      {{#each user.lists}}
+         {{'./affirmation.hbs'}}
+      {{/each}}
+    </div>
+  {{else}}
+    <p>No affirmations yet!</p>
+  {{/if}}
+</section>
+
 <div class='controls'>
 
     <form action="/" method="GET">
@@ -16,20 +30,7 @@
 
 </div>
 
-{{!-- populate 3 random affirmations --}}
 {{!-- route "new" button and create "new" view --}}
 
 
-{{!-- 
-<section class="profile">
-  <h2>{{user.local.email}}</h2>
-  {{#if user.lists}}
-    <div class="items">
-      {{#each user.lists}}
-         {{'./affirmation.hbs'}}
-      {{/each}}
-    </div>
-  {{else}}
-    <p>No affirmations yet!</p>
-  {{/if}}
-</section> --}}
+
