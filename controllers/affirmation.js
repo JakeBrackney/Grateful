@@ -14,7 +14,7 @@ module.exports = {
   },
   create: (req, res) => {
     Affirmation.create({
-      text: req.body.affirmation.text,
+      text: req.body.text,
       author: req.user._id
     }).then(affirmation => {
       req.user.affirmation.push(affirmation)
