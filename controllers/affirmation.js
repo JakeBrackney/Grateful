@@ -3,6 +3,8 @@ const Affirmation = require('../models/Affirmation')
 module.exports = {
   index: (req, res) => {
     Affirmation.find({})
+    .sort({ createdAt: -1 })
+    .limit(10)
     .populate("author")
     .exec(function(err, affirmation) {
       res.render('affirmation/show', affirmation)
@@ -19,7 +21,7 @@ module.exports = {
     }).then(affirmation => {
       req.user.affirmation.push(affirmation)
       req.user.save(err => {
-        res.redirect(`/affirmation/show/${affirmation._id}`)
+        res.render('affirmation/show')
       })
     })
   },
@@ -31,7 +33,7 @@ module.exports = {
         author: req.user._id
       })
       affirmation.save(err => {
-        res.redirect(`/affirmation/show/${affirmation._id}`)
+        res.render('affirmation/show')
       })
     })
   },

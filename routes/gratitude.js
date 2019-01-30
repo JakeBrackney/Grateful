@@ -4,7 +4,7 @@ const gratitudeController = require('../controllers/gratitude')
 
 router.get('/show', gratitudeController.requireAuth, gratitudeController.index)
 router.get('/new', gratitudeController.requireAuth, gratitudeController.new)
-router.post('/', gratitudeController.requireAuth, gratitudeController.create)
+router.post('/show', gratitudeController.requireAuth, gratitudeController.create)
 router.put('/:id', gratitudeController.requireAuth, gratitudeController.update)
 
 module.exports = router

@@ -13,13 +13,13 @@ module.exports = {
     res.render("gratitude/new")
   },
   create: (req, res) => {
-    Affirmation.create({
-      text: req.body.affirmation.text,
+    Gratitude.create({
+      text: req.body.text,
       author: req.user._id
-    }).then(affirmation => {
-      req.user.affirmation.push(affirmation)
+    }).then(gratitude => {
+      req.user.gratitude.push(gratitude)
       req.user.save(err => {
-        res.redirect(`/gratitude/show/${affirmation._id}`)
+        res.render('gratitude/show')
       })
     })
   },
@@ -31,7 +31,7 @@ module.exports = {
         author: req.user._id
       })
       affirmation.save(err => {
-        res.redirect(`/gratitude/show/${affirmation._id}`)
+        res.render('gratitude/show')
       })
     })
   },

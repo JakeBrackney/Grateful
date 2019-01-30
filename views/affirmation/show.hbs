@@ -2,11 +2,10 @@
 
 {{!-- populate 3 random affirmations --}}
 <section class="profile">
-  <h2>{{user.local.email}}</h2>
-  {{#if user.lists}}
+  {{#if affirmations}}
     <div class="items">
-      {{#each user.lists}}
-         {{'./affirmation.hbs'}}
+      {{#each affirmations}}
+         {{'./show.hbs'}}
       {{/each}}
     </div>
   {{else}}
