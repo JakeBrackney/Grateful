@@ -1,24 +1,10 @@
 <h1>My Gratitude List</h1>
 
-{{!-- populate 3 random gratitudes --}}
-<section class="profile">
-  <h2>{{user.local.email}}</h2>
-  {{#if user.lists}}
-    <div class="items">
-      {{#each user.lists}}
-         {{'./affirmation.hbs'}}
-      {{/each}}
-    </div>
-  {{else}}
-    <p>No gratitudes yet!</p>
-  {{/if}}
-</section>
-
 <div class='controls'>
 
-  <form action="index" method="GET">
+  {{!-- <form action="index" method="GET">
     <input type="submit" value="Show All" class="button"/>
-  </form>
+  </form> --}}
 
   <form action="/gratitude/new" method="GET">
     <input type="submit" value="New Gratitude" class="button"/>
@@ -31,5 +17,19 @@
 </div>
 
 
-{{!-- route "new" button and create "new" view --}}
+{{!-- populate 3 random gratitudes --}}
+<section class="profile">
+  {{#if gratitudes}}
+    <ul class="items">
+      {{#each gratitudes}}
+        <li>
+         {{this.text}}
+        </li>
+        {{!-- {{'./show'}} --}}
+      {{/each}}
+    </ul>
+  {{else}}
+    <h3>No gratitudes yet!</h3>
+  {{/if}}
+</section>
 
