@@ -8,10 +8,8 @@ router.use((req, res, next) => {
 
 router.use('/', require("./app.js"))
 router.use('/user', require('./user'))
-router.use('/lists', require('./affirmation'))
-// router.use('/new', require('./affirmation'))
+router.use('/affirmation', require('./affirmation'))
 router.use('/gratitude', require('./gratitude'))
-// router.use('/new', require('./gratitude'))
 
 
 // router.all('*', (req, res) => {

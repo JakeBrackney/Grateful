@@ -2,14 +2,15 @@ const Affirmation = require('../models/Affirmation')
 
 module.exports = {
   index: (req, res) => {
-    Affirmation.find({ _id: req.params.id})
+    Affirmation.find({})
     .populate("author")
     .exec(function(err, affirmation) {
-      res.render('lists/affirmation')
+      res.render('affirmation/show', affirmation)
+      console.log('Show Clicked')
     })
   },
   new: (req, res) => {
-    res.render("new/affirmation")
+    res.render("affirmation/new")
   },
   create: (req, res) => {
     Affirmation.create({
@@ -18,7 +19,7 @@ module.exports = {
     }).then(affirmation => {
       req.user.affirmation.push(affirmation)
       req.user.save(err => {
-        res.redirect(`/views/lists/affirmation/${affirmation._id}`)
+        res.redirect(`/affirmation/show/${affirmation._id}`)
       })
     })
   },
@@ -30,7 +31,7 @@ module.exports = {
         author: req.user._id
       })
       affirmation.save(err => {
-        res.redirect(`/views/lists/affirmation/${affirmation._id}`)
+        res.redirect(`/affirmation/show/${affirmation._id}`)
       })
     })
   },
