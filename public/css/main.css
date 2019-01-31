@@ -2,20 +2,21 @@ body {
   background: rgb(202, 229, 255);
   font-family: 'Baloo Thambi', cursive;
   color: rgb(137, 187, 254);
-  
   text-align: center;
 }
 
 h1 {
   font-size: 96px;
   font-weight: 100;
-  padding: 0;
+  padding: 0 0 0 40px;
   margin: 0 auto;
+  border-bottom: 5px solid rgb(137, 187, 254);
 }
 
 h2 {
   font-size: 72px;
   font-weight: 100;
+  border-bottom: 5px solid rgb(137, 187, 254);
 }
 
 h3 {
@@ -59,6 +60,7 @@ textarea::placeholder {
 
 .controls {
   display: inline-flex;
+  padding-left: 40px;
   /* border: 1px solid black; */
 }
 
@@ -69,9 +71,25 @@ textarea::placeholder {
   border-radius: 50px;
   margin: 15px 15px 0 0;
   padding: 0 15px 0 15px;
-  /* border-color: rgb(111, 138, 183);
-  border-width: 4px; */
 }
+
+.update {
+  font-size: 16px;
+  font-family: 'Baloo Thambi', cursive;
+  color: rgb(111, 138, 183);
+  margin: 15px 15px 0 0;
+  padding: 0 15px 0 15px;
+  text-decoration: none;
+}
+
+.profile {
+  margin-top: 20px;
+}
+
+/* .items {
+  justify-content: space-between;
+  
+} */
 
 ul {
   list-style-type: none;
@@ -81,8 +99,8 @@ li {
   font-size: 24px;
   color: rgb(97, 93, 108);
   font-style: italic;
-  border-bottom: 1px solid rgb(137, 187, 254);
-  margin-bottom: 5px;
+
+  margin-bottom: 8px;
 }
 
 .edit {
@@ -91,15 +109,9 @@ li {
   color: rgb(137, 187, 254);
   font-family: 'Baloo Thambi';
   border-radius: 20px;
-  /* padding-left: 35px; */
+  margin-left: 15px;
 }
 
 .edit:focus {
   outline: none;
 }
-
-
-/* border-color: rgb(172, 167, 182); */
-
-
-

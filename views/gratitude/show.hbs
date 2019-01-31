@@ -1,5 +1,7 @@
 <h1>My Gratitude List</h1>
 
+
+
 <div class='controls'>
 
   <form action="/user/show" method="GET">
@@ -20,11 +22,8 @@
       {{#each gratitudes}}
         <li>
          {{this.text}}
-
-
-          <form action='edit/{{id}}' method='GET' class='controls'>
-            <input type="submit" value="Edit" class="edit" />
-          </form>
+         
+          <a href='edit/{{id}}' method="get" class='update'>Edit</a>
 
         </li>
       {{/each}}
