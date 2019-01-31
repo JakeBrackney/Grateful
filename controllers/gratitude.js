@@ -43,9 +43,9 @@ module.exports = {
   },
 
   delete: (req, res) => {
-    Gratitude.findByIdAndRemove({ _id: req.params.id })
+    Gratitude.findOneAndRemove({ _id: req.params.id })
     .then(() => {
-      res.render('affirmation/show')
+      res.redirect('../../gratitude/show')
     })
   },
 

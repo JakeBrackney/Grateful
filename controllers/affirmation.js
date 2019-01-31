@@ -46,7 +46,7 @@ module.exports = {
     console.log("delete clicked")
     Affirmation.findOneAndRemove({ _id: req.params.id })
     .then(() => {
-      res.redirect('/')
+      res.redirect('../../affirmation/show')
       console.log("delete clicked")
     })
   },

@@ -10,8 +10,8 @@
     <input type="submit" value="Edit" class="button" />
   </form>
 
-  <form action='/gratitude/show/?_method=DELETE' method='POST' class='controls'>
-    <input type="submit" name='_method' value="Delete" class="button" href="{{this.id}}" />
+  <form action='{{this.id}}?_method=DELETE' method='POST' class='controls'>
+    <input type="submit" value="Delete" class="button" />
   </form>
 
 </div>
