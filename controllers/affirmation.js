@@ -15,7 +15,6 @@ module.exports = {
   },
 
   create: (req, res) => {
-    console.log(req.body)
     Affirmation.create({
       text: req.body.text,
       author: req.user._id
@@ -27,10 +26,11 @@ module.exports = {
     })
   },
 
-  show: (req, res) => {
+  edit: (req, res) => {
     Affirmation.findOne({ _id: req.params.id })
       .then(affirmation=> {
-        res.redirect('affirmation/edit', affirmation)
+        res.render('affirmation/edit', affirmation)
+        console.log(affirmation)
       })
   },
 

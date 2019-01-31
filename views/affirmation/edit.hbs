@@ -5,13 +5,13 @@
 
   <form action="/affirmation/show" method="PUT">
     <p class="input-field">
-      <textarea name='text' rows="5" cols="75" value='{{this.text}}'></textarea>
+      <textarea name='text' rows="5" cols="75" placeholder="{{text}}"></textarea>
     </p>
-    <input type="submit" value="Edit" class="button"/>
+    <input type="submit" value="Edit" class="button" />
   </form>
 
   <form action='/affirmation/show/?_method=DELETE' method='POST' class='controls'>
-    <input type="submit" name='_method' value="Delete" class="edit" href="{{this.id}}" />
+    <input type="submit" name='_method' value="Delete" class="button" href="{{this.id}}" />
   </form>
 
 </div>
