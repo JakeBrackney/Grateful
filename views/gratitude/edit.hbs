@@ -1,0 +1,17 @@
+<div class="new-item">
+
+  <h2>Edit Gratitude</h2>
+
+
+  <form action="/gratitude/show" method="PUT">
+    <p class="input-field">
+      <textarea name='text' rows="5" cols="75" placeholder="{{text}}"></textarea>
+    </p>
+    <input type="submit" value="Edit" class="button" />
+  </form>
+
+  <form action='/gratitude/show/?_method=DELETE' method='POST' class='controls'>
+    <input type="submit" name='_method' value="Delete" class="button" href="{{this.id}}" />
+  </form>
+
+</div>

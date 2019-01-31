@@ -25,18 +25,11 @@ module.exports = {
     })
   },
 
-  show: (req, res) => {
-    Gratitude.findOne({ _id: req.params.id })
-      .then(gratitude => {
-        res.render('gratitude/show', gratitude)
-      })
-      .catch(err => console.log(err))
-  },
-
   edit: (req, res) => {
     Gratitude.findOne({ _id: req.params.id })
-      .then(gratitude => {
-        res.render('', gratitude)
+      .then(gratitude=> {
+        res.render('gratitude/edit', gratitude)
+        console.log(gratitude.text)
       })
   },
 
