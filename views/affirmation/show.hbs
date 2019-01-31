@@ -4,10 +4,6 @@
 
 <div class='controls'>
 
-    {{!-- <form action="/" method="GET">
-      <input type="submit" value="Show All" class="button"/>
-    </form> --}}
-
   <form action="/affirmation/new" method="GET">
     <input type="submit" value="New Affirmation" class="button" />
   </form>
@@ -17,17 +13,18 @@
   </form>
 
 </div>
-{{!-- {{log affirmations}}
-{{log 'wat'}} --}}
-{{!-- populate 3 random affirmations --}}
+
 <section class="profile">
   {{#if affirmations}}
     <ul class="items">
       {{#each affirmations}}
         <li>
           {{this.text}}
-          <a href="edit/{{this.id}}" class="edit" method='GET'>Edit</a>
-          <a href="edit/{{this.id}}" class="edit" method='GET'>Delete</a>
+
+          <form action='edit/{{this.id}}' method='GET' class='controls'>
+            <input type="submit" value="Edit" class="edit" />
+          </form>
+
         </li>
       {{/each}}
     </ul>

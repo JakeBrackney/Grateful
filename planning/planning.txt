@@ -19,7 +19,8 @@ To Build:
 
 
 
-
+-- Figure out how to capture single list item so the id shows in the URL. THEN Delete. 
+--
 
 
 

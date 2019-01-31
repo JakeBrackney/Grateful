@@ -29,16 +29,8 @@ module.exports = {
 
   show: (req, res) => {
     Affirmation.findOne({ _id: req.params.id })
-      .then(affirmation => {
-        res.render('affirmation/show', affirmation)
-      })
-      .catch(err => console.log(err))
-  },
-
-  edit: (req, res) => {
-    Affirmation.findOne({ _id: req.params.id })
-      .then(affirmation => {
-        res.render('', affirmation)
+      .then(affirmation=> {
+        res.redirect('affirmation/edit', affirmation)
       })
   },
 
@@ -57,9 +49,11 @@ module.exports = {
   },
 
   delete: (req, res) => {
-    Affirmation.findByIdAndRemove({ _id: req.params.id })
+    console.log("delete clicked")
+    Affirmation.findOneAndRemove({ _id: req.params.id })
     .then(() => {
-      res.render('affirmation/show')
+      res.redirect('/')
+      console.log("delete clicked")
     })
   },
 

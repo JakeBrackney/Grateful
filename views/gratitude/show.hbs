@@ -24,8 +24,14 @@
       {{#each gratitudes}}
         <li>
          {{this.text}}
+         {{!-- <a href="edit/{{this.id}}" class="edit" method='GET'>Edit</a> --}}
+        <form action='' method='GET' class='controls'>
+          <input type="submit" value="Edit" class="edit" href="{{this.id}}" />
+        </form>
+         <form action='' method='DELETE' class="controls">
+            <input type="submit" value="Delete" class="edit" href="{{this.id}}" />
+          </form>
         </li>
-        {{!-- {{'./show'}} --}}
       {{/each}}
     </ul>
   {{else}}

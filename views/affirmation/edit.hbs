@@ -1,0 +1,17 @@
+<div class="new-item">
+
+  <h2>Edit Affirmation</h2>
+
+
+  <form action="/affirmation/show" method="PUT">
+    <p class="input-field">
+      <textarea name='text' rows="5" cols="75" value='{{this.text}}'></textarea>
+    </p>
+    <input type="submit" value="Edit" class="button"/>
+  </form>
+
+  <form action='/affirmation/show/?_method=DELETE' method='POST' class='controls'>
+    <input type="submit" name='_method' value="Delete" class="edit" href="{{this.id}}" />
+  </form>
+
+</div>
