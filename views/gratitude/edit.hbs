@@ -3,7 +3,7 @@
   <h2>Edit Gratitude</h2>
 
 
-  <form action="/gratitude/show" method="PUT">
+  <form action="{{this.id}}?_method=PUT" method="POST">
     <p class="input-field">
       <textarea name='text' rows="5" cols="75" placeholder="{{text}}"></textarea>
     </p>

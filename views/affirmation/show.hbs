@@ -1,7 +1,5 @@
 <h1>My Affirmations</h1>
 
-
-
 <div class='controls'>
 
   <form action="/affirmation/new" method="GET">
@@ -19,7 +17,7 @@
     <ul class="items">
       {{#each affirmations}}
         <li>
-          {{this.text}}
+          {{text}}
 
           <form action='edit/{{id}}' method='GET' class='controls'>
             <input type="submit" value="Edit" class="edit" />

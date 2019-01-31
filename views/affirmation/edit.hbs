@@ -3,14 +3,14 @@
   <h2>Edit Affirmation</h2>
 
 
-  <form action="/affirmation/show" method="PUT">
+  <form action="{{this.id}}?_method=PUT" method="POST">
     <p class="input-field">
       <textarea name='text' rows="5" cols="75" placeholder="{{text}}"></textarea>
     </p>
     <input type="submit" value="Edit" class="button" />
   </form>
 
-  <form action='/affirmation/show/?_method=DELETE' method='POST' class='controls'>
+  <form action='show/{{this.id}}?_method=DELETE' method='POST' class='controls'>
     <input type="submit" name='_method' value="Delete" class="button" href="{{this.id}}" />
   </form>
 

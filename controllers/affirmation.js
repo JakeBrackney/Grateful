@@ -21,7 +21,7 @@ module.exports = {
     }).then(affirmation => {
       req.user.affirmation.push(affirmation._id)
       req.user.save(err => {
-        res.render('affirmation/show')
+        res.redirect('../../affirmation/show')
       })
     })
   },
@@ -30,22 +30,16 @@ module.exports = {
     Affirmation.findOne({ _id: req.params.id })
       .then(affirmation=> {
         res.render('affirmation/edit', affirmation)
-        console.log(affirmation)
+        console.log(affirmation.text)
       })
   },
 
   update: (req, res) => {
-    let { text } = req.body
-    Affirmation.findOneAndUpdate({ _id: req.params.id })
-      .then(affirmation => {
-        affirmation.text.push({
-          text,
-          author: req.user._id
-      })
-      affirmation.save(err => {
-        res.render('affirmation/show')
-      })
-    })
+    Affirmation.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true }, (err, doc) => {
+      console.log(req.body)
+    }).then(() => { 
+      res.redirect('../../affirmation/show')
+    }) 
   },
 
   delete: (req, res) => {

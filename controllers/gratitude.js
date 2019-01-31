@@ -20,7 +20,7 @@ module.exports = {
     }).then(gratitude => {
       req.user.gratitude.push(gratitude._id)
       req.user.save(err => {
-        res.render('gratitude/show')
+        res.redirect('../../gratitude/show')
       })
     })
   },
@@ -34,16 +34,12 @@ module.exports = {
   },
 
   update: (req, res) => {
-    let { text } = req.body
-    Affirmation.findOne({ _id: req.params.id }).then(affirmation => {
-      affirmation.text.push({
-        text,
-        author: req.user._id
-      })
-      affirmation.save(err => {
-        res.render('gratitude/show')
-      })
-    })
+    Gratitude.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true }, (err, doc) => {
+      console.log(req.body)
+    }).then(() => { 
+      res.redirect('../../Gratitude/show')
+    }) 
+
   },
 
   delete: (req, res) => {
