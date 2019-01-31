@@ -1,7 +1,5 @@
 <h1>My Gratitude List</h1>
 
-
-
 <div class='controls'>
 
   <form action="/user/show" method="GET">
@@ -14,15 +12,13 @@
 
 </div>
 
-
-{{!-- populate 3 random gratitudes --}}
 <section class="profile">
   {{#if gratitudes}}
     <ul class="items">
       {{#each gratitudes}}
         <li>
          {{this.text}}
-         
+
           <a href='edit/{{id}}' method="get" class='update'>Edit</a>
 
         </li>
