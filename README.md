@@ -32,16 +32,20 @@ In a separate tab, launch Mongo
 You can then access the database and collections with the following commands
 
 ``` > use grateful ```
+
 ``` > show collections ```
+
 ``` > db.users.find()```
+
 ``` > db.affirmations.find()```
+
 ``` > db.gratitudes```
  
 ### Author
 * Jake Brackney: https://github.com/JakeBrackney/
 
 ### Screencast
-https://youtu.be/us7Mebrp3UE
+* https://youtu.be/us7Mebrp3UE
 
 
 
