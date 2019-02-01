@@ -4,9 +4,7 @@ heading text: rgb(137, 187, 254)
 
 others: rgb(172, 237, 255), rgb(111, 138, 183), rgb(97, 93, 108)
 
-List style: bulleted list
-
-
+List style: none
 
 
 To Build: 
@@ -19,8 +17,6 @@ To Build:
 
 
 
--- Figure out how to capture single list item so the id shows in the URL. THEN Delete. 
---
 
 
 
