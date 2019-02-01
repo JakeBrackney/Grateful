@@ -1,6 +1,3 @@
-
-const User = require("../models/User")
-const Lists = require('../models/Affirmation')
 const passport = require("passport");
 
 module.exports = {
@@ -17,7 +14,7 @@ module.exports = {
         successRedirect: "/user/show",
         failureRedirect: "/user/login",
         failureFlash: true
-      }); // incorporate "Restricting Access logic"
+      });
   
       return login(req, res);
     },
@@ -31,7 +28,7 @@ module.exports = {
         successRedirect: "/user/show",
         failureRedirect: "/user/signup",
         failureFlash: true
-      }); // incorporate "Restricting Access logic"
+      });
   
       return signupStrategy(req, res, next);
     },
@@ -39,7 +36,5 @@ module.exports = {
     logout: (req, res) => {
       req.logout();
       res.redirect("/");
-      // log out logic
-      //upon redirect, user should be signed out
     }
   };

@@ -5,7 +5,6 @@ module.exports = {
     Gratitude.find({})
     .then(gratitude => {
       res.render('gratitude/show', { gratitudes : gratitude } )
-      console.log("Gratitudes clicked")
     })
   },
 
@@ -29,13 +28,11 @@ module.exports = {
     Gratitude.findOne({ _id: req.params.id })
       .then(gratitude=> {
         res.render('gratitude/edit', gratitude)
-        console.log(gratitude.text)
       })
   },
 
   update: (req, res) => {
     Gratitude.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true }, (err, doc) => {
-      console.log(req.body)
     }).then(() => { 
       res.redirect('../../Gratitude/show')
     }) 
