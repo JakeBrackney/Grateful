@@ -47,8 +47,17 @@ You can then access the database and collections with the following commands
 ## Author
 * Jake Brackney: https://github.com/JakeBrackney/
 
+## Issue Tracker
+* https://github.com/JakeBrackney/Grateful/issues
+
 ## Screencast
 * https://youtu.be/us7Mebrp3UE
+
+## Things I'd Like to Fix or Incorporate:
+* Fix user issue. Any logged in user can see all documents stored in the database, regardless of which user created them.
+* Log Out is not fully functional
+* I'd like for a logged in user to see 3 random list items populate on the dashboard for each list, with a link to "Show All".
+* After the last item, I'd like to incorporate a feature to "favorite" list items, making them more likely to populate on each list's dashboard.
 
 
 
